@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha para Compras</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Abas de navegação -->
+    <div class="tabs">
+        <div class="tab active" data-tab="casa">Itens de Casa</div>
+        <div class="tab" data-tab="casamento">Casamento</div>
+        <div class="tab" data-tab="referencias">Referências</div>
+    </div>
+
+    <!-- Aba Itens de Casa -->
+    <div id="casa" class="content active">
+        <h2>Itens de Casa</h2>
+        <form id="form-casa">
+            <input type="text" id="casa-nome" placeholder="Nome do Item" required>
+            <select id="casa-categoria">
+                <option value="">Categoria</option>
+                <option value="Mobiliário">Mobiliário</option>
+                <option value="Eletrodomésticos">Eletrodomésticos</option>
+                <option value="Decoração">Decoração</option>
+            </select>
+            <button type="submit">Adicionar Item</button>
+        </form>
+        <table id="table-casa">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Preço Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Aba Casamento -->
+    <div id="casamento" class="content">
+        <h2>Casamento</h2>
+        <form id="form-casamento">
+            <input type="text" id="casamento-nome" placeholder="Nome do Item" required>
+            <select id="casamento-categoria">
+                <option value="">Categoria</option>
+                <option value="Vestido">Vestido</option>
+                <option value="Decoração">Decoração</option>
+                <option value="Alianças">Alianças</option>
+            </select>
+            <button type="submit">Adicionar Item</button>
+        </form>
+        <table id="table-casamento">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Preço Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Aba Referências -->
+    <div id="referencias" class="content">
+        <h2>Referências</h2>
+        <form id="form-referencia">
+            <input type="number" id="ref-id" placeholder="ID do Item" required>
+            <input type="text" id="ref-link" placeholder="Link da Referência" required>
+            <input type="number" id="ref-preco" placeholder="Preço da Referência" step="0.01" required>
+            <button type="submit">Adicionar Referência</button>
+        </form>
+        <table id="table-referencias">
+            <thead>
+                <tr>
+                    <th>ID do Item</th>
+                    <th>Link</th>
+                    <th>Preço</th>
+                    <th>Comprado</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
